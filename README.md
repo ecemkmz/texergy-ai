@@ -64,6 +64,8 @@ Ekip içi günlük iletişim WhatsApp üzerinden yürütülmüş, teknik değerl
 
 **Meet ve WhatsApp Ekran Görüntüleri:**
 
+[Sprint 1 Daily Scrum Chats](docs/sprint1/Sprint1_Daily_Scrum_Chats.docx)
+
 ---
 
 ## Ürün Geliştirme Durumu
