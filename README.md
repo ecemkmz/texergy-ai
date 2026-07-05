@@ -51,7 +51,7 @@ Sprint sürecindeki görev planlaması, görev dağılımı ve ilerleme takibi C
 
 **Product Backlog Ekran Görüntüsü:**
 
-![Product Backlog](images/backlog.png)
+![Product Backlog](images/sprint1/backlog.png)
 
 
 **Sprint Puanlaması:**
@@ -72,9 +72,9 @@ Sprint sonunda backend tarafında FastAPI ayakta, yüklenen CSV dosyaları Supab
 
 **Ürün Geliştirme Ekran Görüntüsü:**
 
-![Upload Screen](images/upload.png)
+![Upload Screen](images/sprint1/upload.png)
 
-![Dashboard](images/dashboard.png)
+![Dashboard](images/sprint1/dashboard.png)
 
 ---
 
