@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import { analyzeAnomaly } from '../api/client.js'
+
 function Gauge({ score, severity }) {
   const radius = 26
   const circumference = Math.PI * radius
@@ -27,7 +30,29 @@ function Gauge({ score, severity }) {
   )
 }
 
-export default function RiskCard({ category, title, score, severity, description, action }) {
+export default function RiskCard({ category, title, score, severity, description, action, raw }) {
+  const [aiAction, setAiAction] = useState(action)
+  const [loading, setLoading] = useState(false)
+
+  const handleAskAi = async () => {
+    if (!raw) return
+    setLoading(true)
+    try {
+      const res = await analyzeAnomaly({
+        facility_type: raw.facility_type,
+        machine_speed: raw.machine_speed,
+        defect_rate: raw.defect_rate,
+        quality_score: raw.quality_score,
+        energy_waste_flag: raw.energy_waste_flag
+      })
+      setAiAction(res.suggestion)
+    } catch (e) {
+      setAiAction('Yapay zeka ile iletişim kurulamadı.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <article className={`risk-card risk-card--${severity}`}>
       <div className="risk-card__top">
@@ -42,7 +67,15 @@ export default function RiskCard({ category, title, score, severity, description
 
       <div className="risk-card__action">
         <strong>Önerilen aksiyon</strong>
-        {action}
+        {aiAction ? (
+          <p style={{ marginTop: '0.5rem', fontWeight: 500 }}>{aiAction}</p>
+        ) : raw ? (
+          <button className="btn btn-primary" onClick={handleAskAi} disabled={loading} style={{ marginTop: '0.5rem' }}>
+            {loading ? 'Soruluyor...' : 'Yapay Zeka Yorumu Al ✨'}
+          </button>
+        ) : (
+          <p>{action}</p>
+        )}
       </div>
     </article>
   )

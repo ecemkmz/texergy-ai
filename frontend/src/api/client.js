@@ -25,3 +25,15 @@ export async function uploadFile(file) {
   }
   return res.json()
 }
+
+export async function analyzeAnomaly(info) {
+  const res = await fetch(`${API_URL}/analyze_anomaly`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(info)
+  });
+  if (!res.ok) {
+    throw new Error('Yapay Zeka API hatası');
+  }
+  return res.json();
+}

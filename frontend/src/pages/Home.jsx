@@ -5,6 +5,7 @@ import { checkHealth } from '../api/client.js'
 
 export default function Home() {
   const [backendUp, setBackendUp] = useState(null)
+  const [anomalies, setAnomalies] = useState(null)
 
   useEffect(() => {
     checkHealth().then(setBackendUp)
@@ -27,8 +28,8 @@ export default function Home() {
             : 'Backend bulunamadı — mock veri gösteriliyor'}
         </div>
       </header>
-      <UploadPanel />
-      <Dashboard />
+      <UploadPanel onUploadSuccess={(data) => setAnomalies(data.anomalies)} />
+      <Dashboard anomalies={anomalies} />
     </div>
   )
 }

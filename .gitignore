@@ -1,0 +1,30 @@
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+*.db
+*.sqlite3
+backend/texergy.db
+
+# Models
+*.joblib
+*.pkl
+
+# Datasets
+datasets/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dist/
+build/

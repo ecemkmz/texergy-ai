@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { uploadFile } from '../api/client.js'
 
-export default function UploadPanel() {
+export default function UploadPanel({ onUploadSuccess }) {
   const [file, setFile] = useState(null)
   const [dragging, setDragging] = useState(false)
   const [status, setStatus] = useState(null)
@@ -28,6 +28,9 @@ export default function UploadPanel() {
         type: 'ok',
         text: `Yüklendi: ${result?.filename ?? file.name} (${result?.row_count ?? '—'} satır)`,
       })
+      if (onUploadSuccess) {
+        onUploadSuccess(result)
+      }
     } catch (err) {
       setStatus({
         type: 'error',
