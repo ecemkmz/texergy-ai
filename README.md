@@ -110,8 +110,6 @@ Veri setlerinin uygunluğu ve teknik altyapı kurulumu konusunda beklenenden dah
 
 Sprint sürecindeki görev planlaması, görev dağılımı ve ilerleme takibi ClickUp üzerinden gerçekleştirilmiştir.
 
-> **Not:** Proje ismi "Texergy AI"dan "..." olarak değiştirilmiştir.
-
 **Backlog Linki:** [ClickUp Sprint Backlog](https://app.clickup.com/90182837082/v/l/7-90182837082-1)
 
 **Product Backlog Ekran Görüntüsü:**
