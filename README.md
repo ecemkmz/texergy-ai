@@ -103,3 +103,72 @@ Veri setlerinin uygunluğu ve teknik altyapı kurulumu konusunda beklenenden dah
 - Yapay zekâ açıklama katmanının entegrasyonu
 - Dashboard'un gerçek verilerle çalıştırılması
 - MVP'nin daha işlevsel hale getirilmesi
+
+# Sprint 2
+
+## Product Backlog
+
+Sprint sürecindeki görev planlaması, görev dağılımı ve ilerleme takibi ClickUp üzerinden gerçekleştirilmiştir.
+
+> **Not:** Proje ismi "Texergy AI"dan "..." olarak değiştirilmiştir.
+
+**Backlog Linki:** [ClickUp Sprint Backlog](https://app.clickup.com/90182837082/v/l/7-90182837082-1)
+
+**Product Backlog Ekran Görüntüsü:**
+
+![Product Backlog](images/sprint2/backlog.png)
+
+
+**Sprint Puanlaması:**
+
+Sprint 1'de tamamlanamayan 7 puanlık iş Sprint 2'ye devredilmiştir. Bu doğrultuda Sprint 2 kapsamında toplam **10 puanlık görev** planlanmış, Sprint sonunda **6 puan** tamamlanmıştır.
+
+**Daily Scrum:**
+
+Ekip içi günlük iletişim WhatsApp üzerinden yürütülmüş, teknik değerlendirme toplantıları ve sprint planlamaları ise Google Meet üzerinden gerçekleştirilmiştir.
+
+**Meet ve WhatsApp Ekran Görüntüleri:**
+
+[Sprint 2 Daily Scrum Chats](docs/sprint2/Sprint2_Daily_Scrum_Chats.docx)
+
+---
+
+## Ürün Geliştirme Durumu
+
+Sprint 2 boyunca sistemin veri analizi ve yapay zekâ tarafındaki temel bileşenleri geliştirilmiştir.
+
+- Tekstil üretim süreçlerinde kullanılan enerji, üretim ve kalite parametreleri için akademik makaleler ve sektör raporları incelenerek referans değer aralıkları belirlenmiştir.
+- Bu referanslar doğrultusunda sentetik veri seti yeniden oluşturularak daha gerçekçi ve model eğitimine uygun hale getirilmiştir.
+- Jupyter Notebook ortamında kapsamlı EDA (Exploratory Data Analysis) gerçekleştirilmiş; veri kalitesi, dağılımlar, korelasyonlar ve üretim süreçlerine ilişkin istatistiksel analizler tamamlanmıştır.
+- Enerji tüketimi, üretim verimliliği, kalite ve anormallik ilişkileri analiz edilmiştir.
+- XGBoost tabanlı anormallik tespit modeli eğitilmiş ve model çıktıları değerlendirilmiştir.
+- Dashboard tasarımı ve analiz ekranlarını hızlı doğrulamak amacıyla Streamlit tabanlı bir prototip geliştirilmiştir. Bu çalışma yalnızca veri analizi sonuçlarının görselleştirilmesi ve kullanıcı deneyiminin test edilmesi amacıyla hazırlanmış olup, nihai ürün mimarisinde React + FastAPI kullanılacaktır.
+- Dashboard üzerinde tesis, makine ve vardiya bazlı filtreleme yapısı oluşturulmuştur.
+- Farklı kullanıcıların yükleyeceği CSV dosyalarının sisteme uyarlanabilmesi için veri eşleştirme (mapping) yapısı planlanmıştır.
+- Gemini API ile üretilecek aksiyon önerileri ve açıklama katmanı için sistem mimarisi tasarlanmıştır.
+
+## Sprint Review
+
+- Akademik kaynaklardan elde edilen referans değerlerle veri seti yeniden tasarlanmıştır.
+- Sentetik veri setinin gerçek üretim ortamını daha iyi temsil etmesi sağlanmıştır.
+- EDA çalışmaları tamamlanmıştır.
+- XGBoost tabanlı anormallik tespit modeli geliştirilmiştir.
+- Dashboard tasarımı Streamlit üzerinde prototip olarak hazırlanmış ve analiz ekranları doğrulanmıştır.
+- React ve FastAPI tabanlı nihai sistem mimarisi netleştirilmiştir.
+- Gemini entegrasyonu için teknik tasarım tamamlanmıştır.
+- Sprint kapsamında hedeflenen 10 puanın 6 puanı tamamlanmıştır.
+
+---
+
+## Sprint Retrospective
+
+Veri setlerinin uygunluğu ve teknik altyapı kurulumu konusunda beklenenden daha kapsamlı araştırma yapılması gerektiği görülmüştür.
+
+**Bir sonraki sprintte hedeflenenler:**
+
+- React tabanlı arayüz geliştirmelerine öncelik verilmesine karar verilmiştir.
+- Streamlit prototipinde doğrulanan dashboard bileşenlerinin React arayüzüne taşınması planlanmıştır.
+- FastAPI ile yapay zekâ modeli arasındaki entegrasyon Sprint 3'te tamamlanacaktır.
+- CSV kolon eşleştirme (mapping) mekanizması geliştirilerek farklı fabrika veri formatlarının desteklenmesi hedeflenmiştir.
+- Gemini API entegrasyonunun tamamlanması ve model çıktılarının doğal dilde açıklanması Sprint 3 kapsamına alınmıştır.
+- MVP'nin daha işlevsel hale getirilmesi
